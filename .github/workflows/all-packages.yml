@@ -44,6 +44,7 @@ jobs:
   crates-security:
     name: Crates security audit
     runs-on: ubuntu-22.04
+
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
