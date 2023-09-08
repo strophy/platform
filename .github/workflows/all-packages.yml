@@ -24,6 +24,7 @@ jobs:
   deps-versions:
     name: JS dependency versions check
     runs-on: ubuntu-22.04
+    if: ${{ github.event_name == 'push' || !github.event.pull_request.draft }}
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
